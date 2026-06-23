@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>PROJECT EVERGREEN</title>
+
+<style>
+
+body{
+background:black;
+color:#00ff66;
+font-family:Courier New, monospace;
+max-width:1000px;
+margin:auto;
+padding:40px;
+}
+
+input{
+background:black;
+color:#00ff66;
+border:1px solid #00ff66;
+padding:10px;
+font-family:inherit;
+}
+
+button{
+background:black;
+color:#00ff66;
+border:1px solid #00ff66;
+padding:10px 20px;
+cursor:pointer;
+font-family:inherit;
+}
+
+button:hover{
+background:#00ff66;
+color:black;
+}
+
+.folder{
+margin-top:20px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.document{
+display:none;
+margin-top:10px;
+padding-left:20px;
+border-left:1px solid #00ff66;
+}
+
+#archive{
+display:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="login">
+
+<h1>PROJECT EVERGREEN</h1>
+
+<p>RESEARCH DATABASE TERMINAL</p>
+
+<p>AUTHORIZED PERSONNEL ONLY</p>
+
+<input
+type="text"
+id="researcherName"
+placeholder="Enter Researcher Name">
+
+<br><br>
+
+<button onclick="login()">
+LOGIN
+</button>
+
+</div>
+
+<div id="archive">
+
+<h2 id="welcome"></h2>
+
+<p>Clearance Level: 2</p>
+
+<p>Database Connection Established</p>
+
+<hr>
+
+<div class="folder" onclick="toggle('overview')">
+📁 PROJECT OVERVIEW
+</div>
+
+<div class="document" id="overview">
+
+<p>
+PROJECT EVERGREEN was established in 1962 during the Cold War.
+</p>
+
+<p>
+Researchers feared:
+</p>
+
+<ul>
+<li>Nuclear War</li>
+<li>Pandemic Events</li>
+<li>Societal Collapse</li>
+</ul>
+
+<p>
+Research Question:
+</p>
+
+<p>
+How can human beings remain functional when isolated from society?
+</p>
+
+</div>
+
+<div class="folder" onclick="toggle('phase1')">
+📁 RESEARCH PHASE I
+</div>
+
+<div class="document" id="phase1">
+
+<p>
+Researchers discovered that certain individuals adapted significantly better to isolation.
+</p>
+
+<p>
+Traits included:
+</p>
+
+<ul>
+<li>Independence</li>
+<li>Calmness</li>
+<li>Problem Solving</li>
+<li>Emotional Stability</li>
+</ul>
+
+<p>
+These individuals became known as:
+</p>
+
+<p>
+EVERGREEN CANDIDATES
+</p>
+
+</div>
+
+<div class="folder" onclick="toggle('incident')">
+📁 INCIDENT REPORT 024
+</div>
+
+<div class="document" id="incident">
+
+<p>Date: 1998-02-03</p>
+
+<p>Location: Sector 4</p>
+
+<p>
+Three candidates continued normal daily routines after 18 months of complete isolation.
+</p>
+
+<p>
+No signs of psychological decline observed.
+</p>
+
+<p>
+Recommendation: Continue Testing.
+</p>
+
+</div>
+
+<div class="folder" onclick="toggle('audio')">
+📁 AUDIO LOG 09
+</div>
+
+<div class="document" id="audio">
+
+<p>
+"...they don't seem to need us anymore."
+</p>
+
+<p>
+"The candidates have established their own systems."
+</p>
+
+<p>
+"We may have underestimated prolonged isolation."
+</p>
+
+</div>
+
+<div class="folder" onclick="toggle('restricted')">
+🔒 RESTRICTED ARCHIVE
+</div>
+
+<div class="document" id="restricted">
+
+<p>ACCESS DENIED</p>
+
+<p>LEVEL 4 CLEARANCE REQUIRED</p>
+
+<p>████████████████████</p>
+
+<p>████████████████████</p>
+
+<p>████████████████████</p>
+
+</div>
+
+</div>
+
+<script>
+
+function login(){
+
+let name =
+document.getElementById("researcherName").value;
+
+if(name === ""){
+name = "UNKNOWN";
+}
+
+document.getElementById("welcome").innerHTML =
+"Welcome Dr. " + name + ". Access Granted.";
+
+document.getElementById("login").style.display =
+"none";
+
+document.getElementById("archive").style.display =
+"block";
+
+}
+
+function toggle(id){
+
+let element =
+document.getElementById(id);
+
+if(element.style.display === "block"){
+element.style.display = "none";
+}
+else{
+element.style.display = "block";
+}
+
+}
+
+</script>
+
+</body>
+</html>
