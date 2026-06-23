@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html>
 
@@ -16,6 +17,10 @@ font-family:Courier New, monospace;
 max-width:1000px;
 margin:auto;
 padding:40px;
+}
+
+h1{
+font-size:50px;
 }
 
 input{
@@ -41,7 +46,7 @@ color:black;
 }
 
 .folder{
-margin-top:20px;
+margin-top:25px;
 cursor:pointer;
 font-weight:bold;
 }
@@ -57,11 +62,17 @@ border-left:1px solid #00ff66;
 display:none;
 }
 
+.warning{
+color:#00ff66;
+}
+
 </style>
 
 </head>
 
+
 <body>
+
 
 <div id="login">
 
@@ -71,9 +82,9 @@ display:none;
 
 <p>AUTHORIZED PERSONNEL ONLY</p>
 
-<input
-type="text"
-id="researcherName"
+<br>
+
+<input id="researcherName"
 placeholder="Enter Researcher Name">
 
 <br><br>
@@ -84,28 +95,40 @@ LOGIN
 
 </div>
 
+
+
 <div id="archive">
+
 
 <h2 id="welcome"></h2>
 
-<p>Clearance Level: 2</p>
+<p>
+CLEARANCE LEVEL: 2
+</p>
 
-<p>Database Connection Established</p>
+<p>
+DATABASE CONNECTION ESTABLISHED
+</p>
+
 
 <hr>
+
+
 
 <div class="folder" onclick="toggle('overview')">
 📁 PROJECT OVERVIEW
 </div>
 
-<div class="document" id="overview">
+
+<div id="overview" class="document">
+
 
 <p>
 PROJECT EVERGREEN was established in 1962 during the Cold War.
 </p>
 
 <p>
-Researchers feared:
+The project was created to study human survival during possible global catastrophes:
 </p>
 
 <ul>
@@ -114,148 +137,524 @@ Researchers feared:
 <li>Societal Collapse</li>
 </ul>
 
+
 <p>
-Research Question:
+Primary Research Question:
 </p>
 
 <p>
-How can human beings remain functional when isolated from society?
+How can human beings remain functional when completely isolated from society?
 </p>
 
 </div>
 
-<div class="folder" onclick="toggle('phase1')">
+
+
+<div class="folder" onclick="toggle('phase')">
 📁 RESEARCH PHASE I
 </div>
 
-<div class="document" id="phase1">
+
+<div id="phase" class="document">
+
 
 <p>
-Researchers discovered that certain individuals adapted significantly better to isolation.
+Researchers discovered that some individuals adapted better to isolation than others.
 </p>
 
+
 <p>
-Traits included:
+Identified traits:
 </p>
 
 <ul>
 <li>Independence</li>
-<li>Calmness</li>
-<li>Problem Solving</li>
 <li>Emotional Stability</li>
+<li>Calmness Under Pressure</li>
+<li>Problem Solving Ability</li>
 </ul>
 
+
 <p>
-These individuals became known as:
+Selected individuals became known as:
 </p>
 
 <p>
 EVERGREEN CANDIDATES
 </p>
 
+
 </div>
+
+
+
 
 <div class="folder" onclick="toggle('incident')">
 📁 INCIDENT REPORT 024
 </div>
 
-<div class="document" id="incident">
+
+<div id="incident" class="document">
+
 
 <p>Date: 1998-02-03</p>
 
-<p>Location: Sector 4</p>
+<p>
+Location: Sector 4
+</p>
+
 
 <p>
 Three candidates continued normal daily routines after 18 months of complete isolation.
 </p>
 
-<p>
-No signs of psychological decline observed.
-</p>
 
 <p>
-Recommendation: Continue Testing.
+No psychological decline detected.
 </p>
+
+
+<p>
+Recommendation:
+Continue Testing.
+</p>
+
 
 </div>
+
+
+
+
 
 <div class="folder" onclick="toggle('audio')">
 📁 AUDIO LOG 09
 </div>
 
-<div class="document" id="audio">
+
+<div id="audio" class="document">
+
 
 <p>
 "...they don't seem to need us anymore."
 </p>
 
 <p>
-"The candidates have established their own systems."
+"The candidates have created their own systems."
 </p>
 
 <p>
-"We may have underestimated prolonged isolation."
+"We may have misunderstood the purpose of this research."
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="folder" onclick="toggle('candidates')">
+📁 CANDIDATE RECORDS
+</div>
+
+
+
+<div id="candidates" class="document">
+
+
+
+<p onclick="toggle('c117')">
+► Candidate 117 - Michael Andersson
+</p>
+
+
+<div id="c117" class="document">
+
+<h3>CANDIDATE FILE 117</h3>
+
+<p>Name: Michael Andersson</p>
+<p>Age: 32</p>
+<p>Sex: Male</p>
+<p>Status: ACTIVE</p>
+
+<p>
+Isolation Duration:
+18 Months
+</p>
+
+<p>
+Psychological Evaluation:
+Exceptional emotional stability.
+Reduced dependency on social interaction.
+</p>
+
+<p>
+Research Note:
+"The silence is easier than people."
 </p>
 
 </div>
+
+
+
+
+
+<p onclick="toggle('c043')">
+► Candidate 043 - Sarah Whitmore
+</p>
+
+
+<div id="c043" class="document">
+
+
+<h3>CANDIDATE FILE 043</h3>
+
+<p>Name: Sarah Whitmore</p>
+<p>Age: 27</p>
+<p>Sex: Female</p>
+<p>Status: INACTIVE</p>
+
+
+<p>
+Isolation Duration:
+7 Months
+</p>
+
+
+<p>
+Subject requested termination.
+</p>
+
+
+<p>
+Final Evaluation:
+Not suitable for Phase III.
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<p onclick="toggle('c089')">
+► Candidate 089 - Daniel Reeves
+</p>
+
+
+<div id="c089" class="document">
+
+<h3>CANDIDATE FILE 089</h3>
+
+<p>Name: Daniel Reeves</p>
+
+<p>Age: 41</p>
+
+<p>Sex: Male</p>
+
+<p>Status: ACTIVE</p>
+
+
+<p>
+Isolation Duration:
+24 Months
+</p>
+
+
+<p>
+Subject demonstrated advanced adaptation skills.
+</p>
+
+</div>
+
+
+
+
+
+
+
+
+<p onclick="toggle('c301')">
+► Candidate 301 - Emily Carter
+</p>
+
+
+<div id="c301" class="document">
+
+<h3>CANDIDATE FILE 301</h3>
+
+
+<p>Name: Emily Carter</p>
+
+<p>Age: 29</p>
+
+<p>Sex: Female</p>
+
+<p>Status: MISSING</p>
+
+
+<p>
+Last Contact:
+1996-03-21
+</p>
+
+
+<p>
+Subject failed scheduled communication.
+</p>
+
+
+<p>
+Living quarters found occupied.
+Subject missing.
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<p onclick="toggle('c412')">
+► Candidate 412 - Robert Hayes
+</p>
+
+
+<div id="c412" class="document">
+
+
+<h3>CANDIDATE FILE 412</h3>
+
+
+<p>Name: Robert Hayes</p>
+
+<p>Age: 37</p>
+
+<p>Sex: Male</p>
+
+<p>Status: DECEASED</p>
+
+
+<p>
+Official Cause:
+Cardiac Arrest
+</p>
+
+
+<p>
+Subject reported hearing conversations from empty sections of the facility.
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<p onclick="toggle('c527')">
+► Candidate 527 - CORRUPTED FILE
+</p>
+
+
+<div id="c527" class="document">
+
+
+<h3>FILE ERROR</h3>
+
+
+<p>
+Name:
+██████████
+</p>
+
+
+<p>
+Status:
+UNKNOWN
+</p>
+
+
+<p>
+"...candidate continued functioning despite complete withdrawal of support personnel..."
+</p>
+
+
+<p>
+"...Phase III authorization granted..."
+</p>
+
+
+<p>
+ERROR: FILE DAMAGED
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<p onclick="toggle('c000')">
+► Candidate 000 - Access Log
+</p>
+
+
+<div id="c000" class="document">
+
+
+<h3>SYSTEM ACCESS RECORD</h3>
+
+
+<p>
+Researcher:
+<span id="currentUser"></span>
+</p>
+
+
+<p>
+Last Login:
+1998-02-03
+</p>
+
+
+<p>
+WARNING:
+17 archived files modified since previous session.
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
 
 <div class="folder" onclick="toggle('restricted')">
 🔒 RESTRICTED ARCHIVE
 </div>
 
-<div class="document" id="restricted">
 
-<p>ACCESS DENIED</p>
 
-<p>LEVEL 4 CLEARANCE REQUIRED</p>
+<div id="restricted" class="document">
 
-<p>████████████████████</p>
 
-<p>████████████████████</p>
+<p>
+ACCESS DENIED
+</p>
 
-<p>████████████████████</p>
+
+<p>
+LEVEL 4 CLEARANCE REQUIRED
+</p>
+
+
+<p>
+████████████████████
+</p>
+
+<p>
+████████████████████
+</p>
+
 
 </div>
 
+
+
+
+
 </div>
+
+
+
 
 <script>
 
+
+let researcher = "";
+
 function login(){
 
-let name =
+
+researcher =
 document.getElementById("researcherName").value;
 
-if(name === ""){
-name = "UNKNOWN";
+
+if(researcher === ""){
+researcher="UNKNOWN";
 }
+
 
 document.getElementById("welcome").innerHTML =
-"Welcome Dr. " + name + ". Access Granted.";
+"Welcome Dr. " + researcher + ". Access Granted.";
 
-document.getElementById("login").style.display =
-"none";
 
-document.getElementById("archive").style.display =
-"block";
+document.getElementById("currentUser").innerHTML =
+"Dr. " + researcher;
+
+
+document.getElementById("login").style.display="none";
+
+
+document.getElementById("archive").style.display="block";
+
 
 }
 
+
+
+
+
 function toggle(id){
+
 
 let element =
 document.getElementById(id);
 
-if(element.style.display === "block"){
-element.style.display = "none";
-}
-else{
-element.style.display = "block";
-}
+
+if(element.style.display==="block"){
+
+element.style.display="none";
 
 }
+
+else{
+
+element.style.display="block";
+
+}
+
+
+}
+
 
 </script>
 
+
 </body>
+
 </html>
+```
